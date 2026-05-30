@@ -1,8 +1,11 @@
 <?php
 
+use Ernestdefoe\FavoriteTeam\Access\ParticipationPolicy;
 use Ernestdefoe\FavoriteTeam\Api\Controller\ListTeamsController;
 use Ernestdefoe\FavoriteTeam\Api\UserResourceFields;
+use Ernestdefoe\FavoriteTeam\FavoriteTeamServiceProvider;
 use Flarum\Api\Resource\UserResource;
+use Flarum\Discussion\Discussion;
 use Flarum\Extend;
 
 return [
@@ -29,4 +32,15 @@ return [
     // Exposed to the forum so the registration gate knows whether to block.
     (new Extend\Settings())
         ->serializeToForum('ernestdefoe-favorite-team.requireAtRegistration', 'ernestdefoe-favorite-team.require_at_registration', 'boolval', false),
+
+    // Share one TeamRepository (and its memoized teams.json) per request.
+    (new Extend\ServiceProvider())
+        ->register(FavoriteTeamServiceProvider::class),
+
+    // Real, server-side enforcement of the team requirement: when enabled,
+    // members without a team can't start discussions or reply (the JS modal is
+    // only a prompt). Reading and choosing a team stay open.
+    (new Extend\Policy())
+        ->globalPolicy(ParticipationPolicy::class)
+        ->modelPolicy(Discussion::class, ParticipationPolicy::class),
 ];

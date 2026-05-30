@@ -4,20 +4,6 @@ import TeamPickerModal from './forum/components/TeamPickerModal';
 import FavoriteTeamSettings from './forum/components/FavoriteTeamSettings';
 import teamBadge from './forum/helpers/teamBadge';
 
-// Shallow vnode search for the first descendant whose class list contains `cls`.
-function findByClass(vnode, cls) {
-  if (!vnode || typeof vnode !== 'object') return null;
-  const cn = vnode.attrs && (vnode.attrs.className || vnode.attrs.class);
-  if (typeof cn === 'string' && cn.split(/\s+/).indexOf(cls) !== -1) return vnode;
-  if (Array.isArray(vnode.children)) {
-    for (const child of vnode.children) {
-      const found = findByClass(child, cls);
-      if (found) return found;
-    }
-  }
-  return null;
-}
-
 app.initializers.add('ernestdefoe-favorite-team', () => {
   // The favorite-team fields are read via user.attribute(...) directly — no
   // model-prototype accessor, since the User class is a lazy chunk and is
@@ -45,15 +31,13 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
     }
   });
 
-  // Profile/user card: drop the badge INSIDE .UserCard-profile (where the
-  // avatar lives) so CSS can overlay it on the avatar corner, instead of
-  // leaving it stranded at the bottom of the card.
-  extend('flarum/forum/components/UserCard', 'view', function (vnode) {
+  // Profile/user card: add the badge to .UserCard-profile's ItemList (where the
+  // avatar lives) so CSS can overlay it on the avatar corner. Using the
+  // profileItems seam keeps us out of mutating core's returned vnode tree.
+  extend('flarum/forum/components/UserCard', 'profileItems', function (items) {
     const badge = teamBadge(this.attrs.user);
-    if (!badge) return;
-    const target = findByClass(vnode, 'UserCard-profile') || vnode;
-    if (target && Array.isArray(target.children)) {
-      target.children.push(badge);
+    if (badge) {
+      items.add('ernestdefoe-favorite-team', badge, -10);
     }
   });
 

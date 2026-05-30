@@ -12,11 +12,12 @@ import { loadTeams } from '../utils/teams';
 export default class TeamPickerModal extends Modal {
   oninit(vnode) {
     super.oninit(vnode);
-    this.teams    = null;
-    this.loading  = true;
-    this.error    = false;
-    this.saving   = false;
-    this.filter   = '';
+    this.teams     = null;
+    this.loading   = true;
+    this.error     = false;
+    this.saving    = false;
+    this.saveError = false;
+    this.filter    = '';
     this.selected = app.session.user ? app.session.user.attribute('favoriteTeamId') || null : null;
   }
 
@@ -93,6 +94,10 @@ export default class TeamPickerModal extends Modal {
         )
       ),
 
+      this.saveError
+        ? m('.Alert.Alert--error.FavTeamPicker-saveError', t('save_error'))
+        : null,
+
       m('.FavTeamPicker-actions', [
         m(Button, {
           className: 'Button Button--primary',
@@ -115,17 +120,22 @@ export default class TeamPickerModal extends Modal {
   save(teamId) {
     if (this.saving) return;
     this.saving = true;
+    this.saveError = false;
     m.redraw();
 
     app.session.user
       .save({ favoriteTeamId: teamId })
       .then(() => {
         this.saving = false;
+        app.alerts.show({ type: 'success' }, app.translator.trans('ernestdefoe-favorite-team.forum.saved'));
         if (this.attrs.onSaved) this.attrs.onSaved(teamId);
         this.hide();
       })
       .catch(() => {
+        // Surface the failure so the user knows to retry — their selection is
+        // preserved in `this.selected`.
         this.saving = false;
+        this.saveError = true;
         m.redraw();
       });
   }
