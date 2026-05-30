@@ -1,0 +1,20 @@
+ernestdefoe-favorite-team:
+  forum:
+    settings_heading: Favorite Team
+    settings_help: Pick your favorite FBS team — its logo shows under your avatar.
+    choose: Choose your team
+    change: Change team
+    search_placeholder: Search teams…
+    none: No team selected
+    clear: Clear selection
+    save: Save
+    saving: Saving…
+    saved: Saved
+    loading_error: Couldn't load teams. Please try again.
+    gate_title: Who's your team?
+    gate_help: Pick the FBS team you root for to finish setting up your account.
+
+  admin:
+    settings_title: Favorite Team
+    require_at_registration_label: Require members to pick a team
+    require_at_registration_help: New members must choose a favorite team before they can use the forum.

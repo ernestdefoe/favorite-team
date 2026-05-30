@@ -1,0 +1,34 @@
+{
+    "name": "ernestdefoe/favorite-team",
+    "description": "Let members pick a favorite FBS college-football team; show its logo under their avatar.",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "flarum/core": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "ernestdefoe"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ernestdefoe\\FavoriteTeam\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Favorite Team",
+            "category": "feature",
+            "icon": {
+                "name": "fa-solid fa-football",
+                "backgroundColor": "#B22222",
+                "color": "#fff"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
