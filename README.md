@@ -14,8 +14,9 @@ under the member's avatar on posts and on their profile.
 
 - **Team picker** — a searchable grid of all 136 FBS teams (logo + name) in the
   member's account settings.
-- **Avatar badge** — the chosen team's logo appears under the avatar on posts
-  (in the post's side column) and on the profile / user card.
+- **Avatar badge** — the chosen team's logo overlays the bottom-left corner of
+  the avatar on posts (with the team name on hover), and on the profile / user
+  card.
 - **Require at registration (optional)** — an admin toggle that forces new
   members to pick a team before they can use the forum. It shows a
   non-dismissible picker on the next page load for any logged-in member who
@@ -79,6 +80,13 @@ by default.
 Team names and logos are the property of their respective institutions and are
 served from ESPN's public logo CDN. This is an unofficial fan tool and is not
 affiliated with or endorsed by the NCAA, ESPN, or any team.
+
+## Support
+
+Questions, bug reports, and feature requests:
+
+- **Support forum:** https://ernestdefoe.online
+- **Issues:** https://github.com/ernestdefoe/favorite-team/issues
 
 ## License
 
