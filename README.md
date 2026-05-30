@@ -1,5 +1,11 @@
 # Favorite Team
 
+[![Floxum](https://floxum.com/extension/ernestdefoe/favorite-team/badge/name)](https://floxum.com/extension/ernestdefoe/favorite-team)
+[![Version](https://floxum.com/extension/ernestdefoe/favorite-team/badge/highest-version)](https://floxum.com/extension/ernestdefoe/favorite-team)
+[![Downloads](https://floxum.com/extension/ernestdefoe/favorite-team/badge/downloads)](https://floxum.com/extension/ernestdefoe/favorite-team)
+[![Review](https://floxum.com/extension/ernestdefoe/favorite-team/badge/review)](https://floxum.com/extension/ernestdefoe/favorite-team)
+[![License](https://floxum.com/extension/ernestdefoe/favorite-team/badge/license)](https://floxum.com/extension/ernestdefoe/favorite-team)
+
 A [Flarum](https://flarum.org) 2.x extension that lets members pick a favorite
 FBS (NCAA Division I-A) college-football team. The team's logo is displayed
 under the member's avatar on posts and on their profile.

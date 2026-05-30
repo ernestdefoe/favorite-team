@@ -1,5 +1,5 @@
 import app from 'flarum/forum/app';
-import { extend } from 'flarum/common/extend';
+import { extend, override } from 'flarum/common/extend';
 import TeamPickerModal from './forum/components/TeamPickerModal';
 import FavoriteTeamSettings from './forum/components/FavoriteTeamSettings';
 import teamBadge from './forum/helpers/teamBadge';
@@ -19,16 +19,19 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
     items.add('ernestdefoe-favorite-team', m(FavoriteTeamSettings), 5);
   });
 
-  // ── Logo badge under the avatar (posts + profile/user card) ──────────────
-  // Posts: add the badge to the post's side column (where the avatar lives) at
-  // a priority below the avatar's (100), so it sits directly under the avatar.
-  extend('flarum/forum/components/CommentPost', 'sideItems', function (items) {
+  // ── Logo badge on the avatar (posts + profile/user card) ─────────────────
+  // Posts: overlay the badge on the avatar's bottom-LEFT corner — like a group
+  // badge sits on an avatar. We wrap CommentPost.avatar() (the side-column
+  // avatar) so the badge tracks the avatar at any size; CSS handles the corner
+  // placement.
+  override('flarum/forum/components/CommentPost', 'avatar', function (original) {
+    const node = original();
     const post = this.attrs.post;
     const user = post && typeof post.user === 'function' ? post.user() : null;
     const badge = teamBadge(user);
-    if (badge) {
-      items.add('ernestdefoe-favorite-team', badge, -10);
-    }
+    if (!badge) return node;
+
+    return m('.FavTeam-postAvatar', [node, badge]);
   });
 
   // Profile/user card: add the badge to .UserCard-profile's ItemList (where the
