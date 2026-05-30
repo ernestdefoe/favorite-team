@@ -9,7 +9,8 @@
     },
     "authors": [
         {
-            "name": "ernestdefoe"
+            "name": "ernestdefoe",
+            "email": "ernestdefoe@gmail.com"
         }
     ],
     "autoload": {
