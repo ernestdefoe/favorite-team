@@ -2,6 +2,8 @@
 
 namespace Ernestdefoe\FavoriteTeam;
 
+use Illuminate\Support\Facades\File;
+
 /**
  * Loads and indexes the bundled FBS team list (resources/teams.json). The list
  * is static reference data — team id, name, logo (ESPN CDN), color — so it is
@@ -18,8 +20,11 @@ class TeamRepository
     public function all(): array
     {
         if ($this->teams === null) {
+            // Bundled read-only reference data (not a storage disk), read via the
+            // Laravel File facade with an existence guard so a missing file
+            // degrades to an empty list rather than throwing.
             $path = __DIR__ . '/../resources/teams.json';
-            $json = is_readable($path) ? file_get_contents($path) : false;
+            $json = File::exists($path) ? File::get($path) : false;
             $data = $json !== false ? json_decode($json, true) : null;
             $this->teams = is_array($data) ? $data : [];
         }
