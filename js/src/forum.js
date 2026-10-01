@@ -3,7 +3,7 @@ import { extend } from 'flarum/common/extend';
 import TeamPickerModal from './forum/components/TeamPickerModal';
 import FavoriteTeamSettings from './forum/components/FavoriteTeamSettings';
 import teamBadge from './forum/helpers/teamBadge';
-import teamWedge, { teamColor } from './forum/helpers/teamWedge';
+import { teamColor } from './forum/helpers/teamColor';
 
 app.initializers.add('ernestdefoe-favorite-team', () => {
   // The favorite-team fields are read via user.attribute(...) directly — no
@@ -22,50 +22,38 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
 
   // ── The club as a corner wedge on the post ───────────────────────────────
   //
-  // 🚨 The colour is set on the POST element, not on the wedge.
+  // 🚨 Drawn ENTIRELY in CSS, from two custom properties on .Post.
   //
-  // A custom property inherits DOWN, so a colour set on the corner span is
-  // unreachable to anything outside it — the avatar ring included. Putting it
-  // on .Post lets everything in the post read the same value.
+  // The obvious route — appending a wedge element — does not work here.
+  // CommentPost.content() returns a LIST in which .Post-body is one entry, so
+  // pushing onto it makes the wedge a sibling of the card: it then anchors to
+  // .Post and hangs below the card across the Reply link. Reaching into that
+  // vnode's children instead simply rendered nothing.
+  //
+  // A pseudo-element on .Post-body needs no DOM injection at all, and
+  // .Post-body is the white card — the one element in a post that is both
+  // positioned and clipping.
+  //
+  // 🚨 The properties go on the POST, not on the card. A custom property
+  // inherits DOWN, so one set on the card is unreachable to the avatar ring
+  // out in the side column.
   extend('flarum/forum/components/CommentPost', 'elementAttrs', function (attrs) {
     const post = this.attrs.post;
     const user = post && typeof post.user === 'function' ? post.user() : null;
     const color = teamColor(user);
     if (!color) return;
 
+    const team = user.attribute('favoriteTeam');
+
     attrs.className = (attrs.className || '') + ' FavTeam-post';
-    attrs.style = Object.assign({}, attrs.style, { '--fav-team': color });
+    attrs.style = Object.assign({}, attrs.style, {
+      '--fav-team': color,
+      // The crest rides along as a custom property so the wedge is drawn
+      // entirely in CSS — see the note below.
+      '--fav-crest': team && team.logo ? 'url("' + team.logo + '")' : 'none',
+    });
   });
 
-  // 🚨 Appended to content(), which is the children of .Post-BODY.
-  //
-  // .Post-body is the white card: it is the only element here that is both
-  // positioned and clipping, so it is the one a corner wedge can anchor to.
-  // .Post-footer is height:0 in core, so anything put there falls outside the
-  // post entirely and lands under the separator.
-  extend('flarum/forum/components/CommentPost', 'content', function (vdom) {
-    const post = this.attrs.post;
-    const user = post && typeof post.user === 'function' ? post.user() : null;
-    const wedge = teamWedge(user);
-    if (!wedge || !Array.isArray(vdom)) return;
-
-    /*
-     * 🚨 content() returns a LIST in which .Post-body is one entry — it is not
-     * the body's own children. Pushing onto it makes the wedge a SIBLING of the
-     * card, so it anchors to .Post instead and hangs 51px below the card, over
-     * the Reply link.
-     *
-     * The wedge has to go inside the .Post-body vnode, which is the white card
-     * and the only element here that is both positioned and clipping.
-     */
-    const body = vdom.find(
-      (v) => v && v.attrs && typeof v.attrs.className === 'string' && v.attrs.className.indexOf('Post-body') !== -1
-    );
-
-    if (!body) return;
-
-    body.children = (Array.isArray(body.children) ? body.children : [body.children]).concat(wedge);
-  });
 
   // Profile/user card: add the badge to .UserCard-profile's ItemList (where the
   // avatar lives) so CSS can overlay it on the avatar corner. Using the

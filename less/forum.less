@@ -18,64 +18,47 @@
   object-fit: contain;
 }
 
-// 🚨 The fallback colours below are LITERALS, not LESS variables.
-//
-// @control-bg looked like a Flarum variable and is not one. An undefined
-// variable in an extension's LESS is FATAL — the recompile throws
-// Less_Exception_Compiler and every page returns 500, which is a different
-// failure from bad custom_less (silently dropped). The fallback never actually
-// renders anyway: the wedge only exists when a team is set.
-
 // ── The club as a corner wedge on the post ─────────────────────────────────
 //
-// 🚨 The wedge lives INSIDE .Post-body, which is the white card.
+// 🚨 Drawn as a PSEUDO-ELEMENT on .Post-body, which is the white card.
 //
-// It is positioned against its nearest positioned ancestor, and .Post-body is
-// the only element in a post that is both positioned and clipping. Put it a
-// level up and it anchors to the page instead — present in the DOM and nowhere
-// on screen.
-.FavTeamWedge {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  // 🚨 Sized against a SHORT post, not a long one. A corner accent has to be
-  // judged on the smallest card it will ever sit in, which on a forum is a
-  // two-word reply — at 112px the club mark simply became the post.
-  width: 86px;
-  height: 86px;
-  pointer-events: none;
-  overflow: hidden;
-  // 🚨 The outer corner matches the CARD's radius (8px on .Post-body). A square
-  // corner pushes a hard right angle through the curve, and the card looks
-  // broken at exactly the point the eye is drawn to.
-  border-radius: 100% 0 8px 0;
-  // Reaches full strength well before the crest sits on it, so the crest has a
-  // solid ground rather than a fading one.
-  background: linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
-}
-
-.FavTeamWedge-crest {
-  position: absolute;
-  right: 9px;
-  bottom: 8px;
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.55));
-}
-
-// 🚨 The post content sits ABOVE the wedge, so the wedge can never make a word
-// unreadable — it only shows through where there is no text.
-.FavTeam-post .Post-body > *:not(.FavTeamWedge) {
-  position: relative;
-  z-index: 1;
-}
-
-// Room at the foot of the card so a short post still shows the wedge whole
-// rather than having its last line sit across the crest.
+// .Post-body is the only element in a post that is both positioned and
+// clipping, so it is the only thing a corner wedge can anchor to. Injecting an
+// element instead put it a level up, where it anchored to .Post and hung 51px
+// below the card across the Reply link.
+//
+// 🚨 The fallback colour is a LITERAL, not a LESS variable. @control-bg looked
+// like a Flarum variable and is not one, and an undefined variable in an
+// extension's LESS is FATAL — the recompile throws and every page returns 500.
+// That is a different failure from bad custom_less, which is merely dropped.
 .FavTeam-post .Post-body {
+  position: relative;
+  // Room at the foot of the card so a short post still shows the wedge whole
+  // rather than having its last line sit across the crest.
   padding-bottom: 28px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    // 🚨 Sized against a SHORT post. A corner accent has to be judged on the
+    // smallest card it will ever sit in — on a forum that is a two-word reply,
+    // and at 112px the club mark simply became the post.
+    width: 86px;
+    height: 86px;
+    pointer-events: none;
+    // The outer corner matches the card's own 8px radius. A square corner
+    // pushes a right angle through the curve and the card looks broken at
+    // exactly the point the eye is drawn to.
+    border-radius: 100% 0 8px 0;
+    // Crest first, then the wedge beneath it. The gradient reaches full
+    // strength well before the crest sits on it, so the crest has a solid
+    // ground rather than a fading one.
+    background:
+      var(--fav-crest, none) no-repeat right 9px bottom 8px / 42px 42px,
+      linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
+  }
 }
 
 // The club also rings the author's avatar, which is what ties the two together.
@@ -85,25 +68,22 @@
 
 // 🚨 On a phone the wedge SHRINKS; it is not hidden.
 //
-// The card is still there and still the member's post — but a 86px corner on a
-// ~330px card is a quarter of its width, which is the same mistake as sizing it
-// against a long post. The avatar ring goes, because core moves the avatar into
-// the post header at this width where a coloured ring reads as a notification.
+// The card is still there and still the member's post — but an 86px corner on
+// a ~330px card is a quarter of its width, which is the same mistake as sizing
+// it against a long post. The avatar ring goes, because core moves the avatar
+// into the post header at this width where a coloured ring reads as a
+// notification dot.
 @media (max-width: 767px) {
-  .FavTeamWedge {
-    width: 62px;
-    height: 62px;
-  }
-
-  .FavTeamWedge-crest {
-    right: 7px;
-    bottom: 6px;
-    width: 30px;
-    height: 30px;
-  }
-
   .FavTeam-post .Post-body {
     padding-bottom: 20px;
+
+    &::after {
+      width: 62px;
+      height: 62px;
+      background:
+        var(--fav-crest, none) no-repeat right 7px bottom 6px / 30px 30px,
+        linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
+    }
   }
 
   .FavTeam-post .Post-side .Avatar {
