@@ -52,12 +52,23 @@
     // pushes a right angle through the curve and the card looks broken at
     // exactly the point the eye is drawn to.
     border-radius: 100% 0 8px 0;
-    // Crest first, then the wedge beneath it. The gradient reaches full
-    // strength well before the crest sits on it, so the crest has a solid
-    // ground rather than a fading one.
-    background:
-      var(--fav-crest, none) no-repeat right 9px bottom 8px / 42px 42px,
-      linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
+    /*
+     * 🚨 LONGHAND, not the `background` shorthand.
+     *
+     * The shorthand with a `/ 42px 42px` size was dropped entirely — computed
+     * background-image came back `none`. A var() substitution that produces an
+     * invalid declaration makes the WHOLE declaration invalid-at-computed-value
+     * time, and the `/` size syntax does not survive the LESS compiler either.
+     * In longhand each property stands or falls on its own.
+     *
+     * Crest first, then the wedge beneath it. The gradient reaches full
+     * strength well before the crest sits on it, so the crest has a solid
+     * ground rather than a fading one.
+     */
+    background-image: var(--fav-crest, none), linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 9px bottom 8px, 0 0;
+    background-size: 42px 42px, auto;
   }
 }
 
@@ -80,9 +91,8 @@
     &::after {
       width: 62px;
       height: 62px;
-      background:
-        var(--fav-crest, none) no-repeat right 7px bottom 6px / 30px 30px,
-        linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
+      background-position: right 7px bottom 6px, 0 0;
+      background-size: 30px 30px, auto;
     }
   }
 
