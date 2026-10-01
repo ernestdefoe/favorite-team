@@ -18,35 +18,88 @@
   object-fit: contain;
 }
 
-// In the post stream, overlay the badge on the avatar's bottom-LEFT corner
-// (like a group badge on an avatar). The avatar is wrapped by
-// CommentPost.avatar() in .FavTeam-postAvatar, so the badge is positioned
-// relative to the avatar itself and tracks it at any size.
-.FavTeam-postAvatar {
-  position: relative;
-  display: inline-block;
-  line-height: 0;
-
-  > .FavTeamBadge {
-    position: absolute;
-    bottom: -2px;
-    left: -2px;
-    width: 24px;
-    height: 24px;
-    border: 2px solid var(--body-bg, #fff);
-
-    .FavTeamBadge-logo {
-      width: 18px;
-      height: 18px;
-    }
-  }
+// ── The club as a corner wedge on the post ─────────────────────────────────
+//
+// 🚨 The wedge lives INSIDE .Post-body, which is the white card.
+//
+// It is positioned against its nearest positioned ancestor, and .Post-body is
+// the only element in a post that is both positioned and clipping. Put it a
+// level up and it anchors to the page instead — present in the DOM and nowhere
+// on screen.
+.FavTeamWedge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  // 🚨 Sized against a SHORT post, not a long one. A corner accent has to be
+  // judged on the smallest card it will ever sit in, which on a forum is a
+  // two-word reply — at 112px the club mark simply became the post.
+  width: 86px;
+  height: 86px;
+  pointer-events: none;
+  overflow: hidden;
+  // 🚨 The outer corner matches the CARD's radius (8px on .Post-body). A square
+  // corner pushes a hard right angle through the curve, and the card looks
+  // broken at exactly the point the eye is drawn to.
+  border-radius: 100% 0 8px 0;
+  // Reaches full strength well before the crest sits on it, so the crest has a
+  // solid ground rather than a fading one.
+  background: linear-gradient(135deg, transparent 2%, var(--fav-team, @control-bg) 52%);
 }
 
-// The side-column avatar is hidden on phones (core moves it into the header),
-// so hide the overlay wrapper there too rather than leave a stray badge.
+.FavTeamWedge-crest {
+  position: absolute;
+  right: 9px;
+  bottom: 8px;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.55));
+}
+
+// 🚨 The post content sits ABOVE the wedge, so the wedge can never make a word
+// unreadable — it only shows through where there is no text.
+.FavTeam-post .Post-body > *:not(.FavTeamWedge) {
+  position: relative;
+  z-index: 1;
+}
+
+// Room at the foot of the card so a short post still shows the wedge whole
+// rather than having its last line sit across the crest.
+.FavTeam-post .Post-body {
+  padding-bottom: 28px;
+}
+
+// The club also rings the author's avatar, which is what ties the two together.
+.FavTeam-post .Post-side .Avatar {
+  box-shadow: 0 0 0 2px var(--fav-team, @control-bg), 0 6px 16px -10px rgba(0, 0, 0, 0.8);
+}
+
+// 🚨 On a phone the wedge SHRINKS; it is not hidden.
+//
+// The card is still there and still the member's post — but a 86px corner on a
+// ~330px card is a quarter of its width, which is the same mistake as sizing it
+// against a long post. The avatar ring goes, because core moves the avatar into
+// the post header at this width where a coloured ring reads as a notification.
 @media (max-width: 767px) {
-  .Post-side .FavTeam-postAvatar {
-    display: none;
+  .FavTeamWedge {
+    width: 62px;
+    height: 62px;
+  }
+
+  .FavTeamWedge-crest {
+    right: 7px;
+    bottom: 6px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .FavTeam-post .Post-body {
+    padding-bottom: 20px;
+  }
+
+  .FavTeam-post .Post-side .Avatar {
+    box-shadow: none;
   }
 }
 

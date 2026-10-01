@@ -1,8 +1,9 @@
 import app from 'flarum/forum/app';
-import { extend, override } from 'flarum/common/extend';
+import { extend } from 'flarum/common/extend';
 import TeamPickerModal from './forum/components/TeamPickerModal';
 import FavoriteTeamSettings from './forum/components/FavoriteTeamSettings';
 import teamBadge from './forum/helpers/teamBadge';
+import teamWedge, { teamColor } from './forum/helpers/teamWedge';
 
 app.initializers.add('ernestdefoe-favorite-team', () => {
   // The favorite-team fields are read via user.attribute(...) directly — no
@@ -19,19 +20,34 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
     items.add('ernestdefoe-favorite-team', m(FavoriteTeamSettings), 5);
   });
 
-  // ── Logo badge on the avatar (posts + profile/user card) ─────────────────
-  // Posts: overlay the badge on the avatar's bottom-LEFT corner — like a group
-  // badge sits on an avatar. We wrap CommentPost.avatar() (the side-column
-  // avatar) so the badge tracks the avatar at any size; CSS handles the corner
-  // placement.
-  override('flarum/forum/components/CommentPost', 'avatar', function (original) {
-    const node = original();
+  // ── The club as a corner wedge on the post ───────────────────────────────
+  //
+  // 🚨 The colour is set on the POST element, not on the wedge.
+  //
+  // A custom property inherits DOWN, so a colour set on the corner span is
+  // unreachable to anything outside it — the avatar ring included. Putting it
+  // on .Post lets everything in the post read the same value.
+  extend('flarum/forum/components/CommentPost', 'elementAttrs', function (attrs) {
     const post = this.attrs.post;
     const user = post && typeof post.user === 'function' ? post.user() : null;
-    const badge = teamBadge(user);
-    if (!badge) return node;
+    const color = teamColor(user);
+    if (!color) return;
 
-    return m('.FavTeam-postAvatar', [node, badge]);
+    attrs.className = (attrs.className || '') + ' FavTeam-post';
+    attrs.style = Object.assign({}, attrs.style, { '--fav-team': color });
+  });
+
+  // 🚨 Appended to content(), which is the children of .Post-BODY.
+  //
+  // .Post-body is the white card: it is the only element here that is both
+  // positioned and clipping, so it is the one a corner wedge can anchor to.
+  // .Post-footer is height:0 in core, so anything put there falls outside the
+  // post entirely and lands under the separator.
+  extend('flarum/forum/components/CommentPost', 'content', function (vdom) {
+    const post = this.attrs.post;
+    const user = post && typeof post.user === 'function' ? post.user() : null;
+    const wedge = teamWedge(user);
+    if (wedge && Array.isArray(vdom)) vdom.push(wedge);
   });
 
   // Profile/user card: add the badge to .UserCard-profile's ItemList (where the
