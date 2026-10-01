@@ -18,6 +18,14 @@
   object-fit: contain;
 }
 
+// 🚨 The fallback colours below are LITERALS, not LESS variables.
+//
+// @control-bg looked like a Flarum variable and is not one. An undefined
+// variable in an extension's LESS is FATAL — the recompile throws
+// Less_Exception_Compiler and every page returns 500, which is a different
+// failure from bad custom_less (silently dropped). The fallback never actually
+// renders anyway: the wedge only exists when a team is set.
+
 // ── The club as a corner wedge on the post ─────────────────────────────────
 //
 // 🚨 The wedge lives INSIDE .Post-body, which is the white card.
@@ -44,7 +52,7 @@
   border-radius: 100% 0 8px 0;
   // Reaches full strength well before the crest sits on it, so the crest has a
   // solid ground rather than a fading one.
-  background: linear-gradient(135deg, transparent 2%, var(--fav-team, @control-bg) 52%);
+  background: linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
 }
 
 .FavTeamWedge-crest {
@@ -72,7 +80,7 @@
 
 // The club also rings the author's avatar, which is what ties the two together.
 .FavTeam-post .Post-side .Avatar {
-  box-shadow: 0 0 0 2px var(--fav-team, @control-bg), 0 6px 16px -10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 0 2px var(--fav-team, #9aa5b1), 0 6px 16px -10px rgba(0, 0, 0, 0.8);
 }
 
 // 🚨 On a phone the wedge SHRINKS; it is not hidden.
