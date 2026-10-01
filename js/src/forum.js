@@ -47,7 +47,24 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
     const post = this.attrs.post;
     const user = post && typeof post.user === 'function' ? post.user() : null;
     const wedge = teamWedge(user);
-    if (wedge && Array.isArray(vdom)) vdom.push(wedge);
+    if (!wedge || !Array.isArray(vdom)) return;
+
+    /*
+     * 🚨 content() returns a LIST in which .Post-body is one entry — it is not
+     * the body's own children. Pushing onto it makes the wedge a SIBLING of the
+     * card, so it anchors to .Post instead and hangs 51px below the card, over
+     * the Reply link.
+     *
+     * The wedge has to go inside the .Post-body vnode, which is the white card
+     * and the only element here that is both positioned and clipping.
+     */
+    const body = vdom.find(
+      (v) => v && v.attrs && typeof v.attrs.className === 'string' && v.attrs.className.indexOf('Post-body') !== -1
+    );
+
+    if (!body) return;
+
+    body.children = (Array.isArray(body.children) ? body.children : [body.children]).concat(wedge);
   });
 
   // Profile/user card: add the badge to .UserCard-profile's ItemList (where the
