@@ -20,28 +20,38 @@
 
 // ── The club as a corner wedge on the post ─────────────────────────────────
 //
-// 🚨 Drawn as a PSEUDO-ELEMENT on .Post-body, which is the white card.
+// 🚨 TWO pseudo-elements, matching the XenForo build exactly.
 //
-// .Post-body is the only element in a post that is both positioned and
-// clipping, so it is the only thing a corner wedge can anchor to. Injecting an
-// element instead put it a level up, where it anchored to .Post and hung 51px
-// below the card across the Reply link.
+// ::after is the wedge, ::before is the crest. They are separate because the
+// crest needs `filter: drop-shadow(...)` and the wedge must not have it — a
+// filter applies to the whole element, so one pseudo-element carrying both
+// would shadow the gradient too.
 //
-// 🚨 The fallback colour is a LITERAL, not a LESS variable. @control-bg looked
-// like a Flarum variable and is not one, and an undefined variable in an
-// extension's LESS is FATAL — the recompile throws and every page returns 500.
-// That is a different failure from bad custom_less, which is merely dropped.
+// That shadow is the whole reason the crest reads: the wedge is the club's
+// colour and so is the club's crest, so Alabama crimson sat on Alabama crimson
+// and the corner rendered with no mark on it at all. XenForo solved it this
+// way and it is the right answer — a dark disc behind the crest also separates
+// it, but it reads as a badge stuck on the corner rather than part of it.
+//
+// 🚨 Drawn on .Post-body because that is the white card: the only element in a
+// post that is both positioned and clipping. Injecting an element instead put
+// it a level up, where it anchored to .Post and hung below the card across the
+// Reply link.
+//
+// 🚨 The fallback colour is a LITERAL. @control-bg looked like a Flarum
+// variable and is not one, and an undefined variable in an extension's LESS is
+// FATAL — the recompile throws and every page returns 500. That is a different
+// failure from bad custom_less, which is merely dropped.
 .FavTeam-post .Post-body {
   position: relative;
-  // Room at the foot of the card so a short post still shows the wedge whole
-  // rather than having its last line sit across the crest.
-  padding-bottom: 28px;
 
+  // The wedge itself.
   &::after {
     content: '';
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 0;
     // 🚨 Sized against a SHORT post. A corner accent has to be judged on the
     // smallest card it will ever sit in — on a forum that is a two-word reply,
     // and at 112px the club mark simply became the post.
@@ -52,36 +62,47 @@
     // pushes a right angle through the curve and the card looks broken at
     // exactly the point the eye is drawn to.
     border-radius: 100% 0 8px 0;
-    /*
-     * 🚨 LONGHAND, not the `background` shorthand.
-     *
-     * The shorthand with a `/ 42px 42px` size was dropped entirely — computed
-     * background-image came back `none`. A var() substitution that produces an
-     * invalid declaration makes the WHOLE declaration invalid-at-computed-value
-     * time, and the `/` size syntax does not survive the LESS compiler either.
-     * In longhand each property stands or falls on its own.
-     *
-     * Crest first, then the wedge beneath it. The gradient reaches full
-     * strength well before the crest sits on it, so the crest has a solid
-     * ground rather than a fading one.
-     */
-    /*
-     * 🚨 A dark disc sits UNDER the crest.
-     *
-     * The wedge is the club's own colour and so is the club's crest — Alabama
-     * crimson on Alabama crimson rendered as a plain red corner with no mark on
-     * it at all. The XenForo build solved this with a drop-shadow on an <img>,
-     * which a background layer cannot take, so the separation comes from a disc
-     * instead. It works for every club colour rather than just the dark ones.
-     */
-    background-image:
-      var(--fav-crest, none),
-      radial-gradient(circle at calc(100% - 30px) calc(100% - 29px), rgba(0, 0, 0, 0.42) 0 26px, transparent 27px),
-      linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: right 9px bottom 8px, 0 0, 0 0;
-    background-size: 42px 42px, auto, auto;
+    // Reaches full strength well before the crest sits on it, so the crest has
+    // a solid ground rather than a fading one.
+    background-image: linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
   }
+
+  // The crest, on its own layer so the shadow is its alone.
+  &::before {
+    content: '';
+    position: absolute;
+    right: 9px;
+    bottom: 8px;
+    z-index: 1;
+    width: 42px;
+    height: 42px;
+    pointer-events: none;
+    background-image: var(--fav-crest, none);
+    background-repeat: no-repeat;
+    background-position: center;
+    // 🚨 `contain`, not a fixed size. ESPN crests are not all square, and a
+    // fixed 42x42 squashes the wide ones.
+    background-size: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.55));
+  }
+}
+
+// 🚨 The post content sits ABOVE the wedge.
+//
+// A positioned pseudo-element paints after the in-flow content, so without
+// this the wedge covers the end of a long post and the last words simply
+// disappear behind it. Raising the content means the wedge can only ever show
+// through where there is no text.
+.FavTeam-post .Post-body > * {
+  position: relative;
+  z-index: 1;
+}
+
+// 🚨 Specific enough to actually win. A plain `.FavTeam-post .Post-body` rule
+// lost to the theme's own padding and computed back as 14px, so the wedge had
+// nothing to clear and a short post's last line sat across the crest.
+.CommentPost.FavTeam-post .Post-body {
+  padding-bottom: 34px;
 }
 
 // The club also rings the author's avatar, which is what ties the two together.
@@ -98,18 +119,21 @@
 // notification dot.
 @media (max-width: 767px) {
   .FavTeam-post .Post-body {
-    padding-bottom: 20px;
-
     &::after {
       width: 62px;
       height: 62px;
-      background-image:
-        var(--fav-crest, none),
-        radial-gradient(circle at calc(100% - 22px) calc(100% - 21px), rgba(0, 0, 0, 0.42) 0 19px, transparent 20px),
-        linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
-      background-position: right 7px bottom 6px, 0 0, 0 0;
-      background-size: 30px 30px, auto, auto;
     }
+
+    &::before {
+      right: 7px;
+      bottom: 6px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .CommentPost.FavTeam-post .Post-body {
+    padding-bottom: 24px;
   }
 
   .FavTeam-post .Post-side .Avatar {
