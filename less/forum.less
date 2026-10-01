@@ -65,10 +65,22 @@
      * strength well before the crest sits on it, so the crest has a solid
      * ground rather than a fading one.
      */
-    background-image: var(--fav-crest, none), linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
-    background-repeat: no-repeat, no-repeat;
-    background-position: right 9px bottom 8px, 0 0;
-    background-size: 42px 42px, auto;
+    /*
+     * 🚨 A dark disc sits UNDER the crest.
+     *
+     * The wedge is the club's own colour and so is the club's crest — Alabama
+     * crimson on Alabama crimson rendered as a plain red corner with no mark on
+     * it at all. The XenForo build solved this with a drop-shadow on an <img>,
+     * which a background layer cannot take, so the separation comes from a disc
+     * instead. It works for every club colour rather than just the dark ones.
+     */
+    background-image:
+      var(--fav-crest, none),
+      radial-gradient(circle at calc(100% - 30px) calc(100% - 29px), rgba(0, 0, 0, 0.42) 0 26px, transparent 27px),
+      linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: right 9px bottom 8px, 0 0, 0 0;
+    background-size: 42px 42px, auto, auto;
   }
 }
 
@@ -91,8 +103,12 @@
     &::after {
       width: 62px;
       height: 62px;
-      background-position: right 7px bottom 6px, 0 0;
-      background-size: 30px 30px, auto;
+      background-image:
+        var(--fav-crest, none),
+        radial-gradient(circle at calc(100% - 22px) calc(100% - 21px), rgba(0, 0, 0, 0.42) 0 19px, transparent 20px),
+        linear-gradient(135deg, transparent 2%, var(--fav-team, #9aa5b1) 52%);
+      background-position: right 7px bottom 6px, 0 0, 0 0;
+      background-size: 30px 30px, auto, auto;
     }
   }
 
