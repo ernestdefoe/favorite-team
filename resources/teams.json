@@ -6,7 +6,9 @@
     "shortName": "Air Force",
     "abbreviation": "AF",
     "color": "#003594",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2005.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2006",
@@ -15,7 +17,9 @@
     "shortName": "Akron",
     "abbreviation": "AKR",
     "color": "#041e42",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2006.png",
+    "crestHalo": "dark"
   },
   {
     "id": "333",
@@ -24,7 +28,9 @@
     "shortName": "Alabama",
     "abbreviation": "ALA",
     "color": "#9e1b32",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/333.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2026",
@@ -33,7 +39,9 @@
     "shortName": "App State",
     "abbreviation": "APP",
     "color": "#000000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
+    "crestHalo": "dark"
   },
   {
     "id": "9",
@@ -42,7 +50,9 @@
     "shortName": "Arizona St",
     "abbreviation": "ASU",
     "color": "#ffc627",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+    "crestHalo": "dark"
   },
   {
     "id": "12",
@@ -51,7 +61,9 @@
     "shortName": "Arizona",
     "abbreviation": "ARIZ",
     "color": "#cc0033",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/12.png",
+    "crestHalo": "dark"
   },
   {
     "id": "8",
@@ -60,7 +72,9 @@
     "shortName": "Arkansas",
     "abbreviation": "ARK",
     "color": "#a32136",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+    "crestHalo": "light"
   },
   {
     "id": "2032",
@@ -69,7 +83,9 @@
     "shortName": "Arkansas St",
     "abbreviation": "ARST",
     "color": "#cc092f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+    "crestHalo": "light"
   },
   {
     "id": "349",
@@ -78,7 +94,9 @@
     "shortName": "Army",
     "abbreviation": "ARMY",
     "color": "#000000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2",
@@ -87,7 +105,9 @@
     "shortName": "Auburn",
     "abbreviation": "AUB",
     "color": "#002b5c",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2050",
@@ -96,7 +116,9 @@
     "shortName": "Ball State",
     "abbreviation": "BALL",
     "color": "#ba0c2f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2050.png",
+    "crestHalo": "dark"
   },
   {
     "id": "239",
@@ -105,7 +127,9 @@
     "shortName": "Baylor",
     "abbreviation": "BAY",
     "color": "#154734",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/239.png",
+    "crestHalo": "dark"
   },
   {
     "id": "68",
@@ -114,7 +138,9 @@
     "shortName": "Boise St",
     "abbreviation": "BOIS",
     "color": "#0033a0",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+    "crestHalo": "light"
   },
   {
     "id": "103",
@@ -123,7 +149,9 @@
     "shortName": "Boston College",
     "abbreviation": "BC",
     "color": "#8c2232",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/103.png",
+    "crestHalo": "dark"
   },
   {
     "id": "189",
@@ -132,7 +160,9 @@
     "shortName": "Bowling Green",
     "abbreviation": "BGSU",
     "color": "#fd5000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/189.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2084",
@@ -141,7 +171,9 @@
     "shortName": "Buffalo",
     "abbreviation": "BUF",
     "color": "#005bbb",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2084.png",
+    "crestHalo": "dark"
   },
   {
     "id": "252",
@@ -150,7 +182,9 @@
     "shortName": "BYU",
     "abbreviation": "BYU",
     "color": "#0047ba",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/252.png",
+    "crestHalo": "dark"
   },
   {
     "id": "25",
@@ -159,7 +193,9 @@
     "shortName": "California",
     "abbreviation": "CAL",
     "color": "#041e42",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/25.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2117",
@@ -168,7 +204,9 @@
     "shortName": "C Michigan",
     "abbreviation": "CMU",
     "color": "#4c0027",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2117.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2429",
@@ -177,7 +215,9 @@
     "shortName": "Charlotte",
     "abbreviation": "CLT",
     "color": "#005035",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2429.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2132",
@@ -186,7 +226,9 @@
     "shortName": "Cincinnati",
     "abbreviation": "CIN",
     "color": "#000000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2132.png",
+    "crestHalo": "dark"
   },
   {
     "id": "228",
@@ -195,7 +237,9 @@
     "shortName": "Clemson",
     "abbreviation": "CLEM",
     "color": "#f56600",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/228.png",
+    "crestHalo": "dark"
   },
   {
     "id": "324",
@@ -204,7 +248,9 @@
     "shortName": "Coastal",
     "abbreviation": "CCU",
     "color": "#006f71",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
+    "crestHalo": "light"
   },
   {
     "id": "38",
@@ -213,7 +259,9 @@
     "shortName": "Colorado",
     "abbreviation": "COLO",
     "color": "#cfb87c",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+    "crestHalo": "dark"
   },
   {
     "id": "36",
@@ -222,7 +270,9 @@
     "shortName": "Colorado St",
     "abbreviation": "CSU",
     "color": "#004c23",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+    "crestHalo": "dark"
   },
   {
     "id": "48",
@@ -231,7 +281,9 @@
     "shortName": "Delaware",
     "abbreviation": "DEL",
     "color": "#00539f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/48.png",
+    "crestHalo": "dark"
   },
   {
     "id": "150",
@@ -240,7 +292,9 @@
     "shortName": "Duke",
     "abbreviation": "DUKE",
     "color": "#00539b",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/150.png",
+    "crestHalo": "dark"
   },
   {
     "id": "151",
@@ -249,7 +303,9 @@
     "shortName": "East Carolina",
     "abbreviation": "ECU",
     "color": "#582c83",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2199",
@@ -258,7 +314,9 @@
     "shortName": "E Michigan",
     "abbreviation": "EMU",
     "color": "#006938",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2226",
@@ -267,7 +325,9 @@
     "shortName": "FAU",
     "abbreviation": "FAU",
     "color": "#003366",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+    "crestHalo": "dark"
   },
   {
     "id": "57",
@@ -276,7 +336,9 @@
     "shortName": "Florida",
     "abbreviation": "FLA",
     "color": "#0021a5",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/57.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2229",
@@ -285,7 +347,9 @@
     "shortName": "FIU",
     "abbreviation": "FIU",
     "color": "#091f3f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2229.png",
+    "crestHalo": "dark"
   },
   {
     "id": "52",
@@ -294,7 +358,9 @@
     "shortName": "Florida St",
     "abbreviation": "FSU",
     "color": "#782f40",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+    "crestHalo": "dark"
   },
   {
     "id": "278",
@@ -303,7 +369,9 @@
     "shortName": "Fresno St",
     "abbreviation": "FRES",
     "color": "#b1102b",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/278.png",
+    "crestHalo": "dark"
   },
   {
     "id": "61",
@@ -312,7 +380,9 @@
     "shortName": "Georgia",
     "abbreviation": "UGA",
     "color": "#ba0c2f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+    "crestHalo": "dark"
   },
   {
     "id": "290",
@@ -321,7 +391,9 @@
     "shortName": "GA Southern",
     "abbreviation": "GASO",
     "color": "#041e42",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/290.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2247",
@@ -330,7 +402,9 @@
     "shortName": "Georgia St",
     "abbreviation": "GAST",
     "color": "#0039a6",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2247.png",
+    "crestHalo": "dark"
   },
   {
     "id": "59",
@@ -339,7 +413,9 @@
     "shortName": "Georgia Tech",
     "abbreviation": "GT",
     "color": "#b3a369",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/59.png",
+    "crestHalo": "dark"
   },
   {
     "id": "62",
@@ -348,7 +424,9 @@
     "shortName": "Hawai'i",
     "abbreviation": "HAW",
     "color": "#005737",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/62.png",
+    "crestHalo": "dark"
   },
   {
     "id": "248",
@@ -357,7 +435,9 @@
     "shortName": "Houston",
     "abbreviation": "HOU",
     "color": "#c8102e",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+    "crestHalo": "dark"
   },
   {
     "id": "356",
@@ -366,7 +446,9 @@
     "shortName": "Illinois",
     "abbreviation": "ILL",
     "color": "#ff5f05",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/356.png",
+    "crestHalo": "dark"
   },
   {
     "id": "84",
@@ -375,7 +457,9 @@
     "shortName": "Indiana",
     "abbreviation": "IU",
     "color": "#970310",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/84.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2294",
@@ -384,7 +468,9 @@
     "shortName": "Iowa",
     "abbreviation": "IOWA",
     "color": "#231f20",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2294.png",
+    "crestHalo": "dark"
   },
   {
     "id": "66",
@@ -393,7 +479,9 @@
     "shortName": "Iowa State",
     "abbreviation": "ISU",
     "color": "#ae192d",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+    "crestHalo": "dark"
   },
   {
     "id": "55",
@@ -402,7 +490,9 @@
     "shortName": "Jax State",
     "abbreviation": "JXST",
     "color": "#cc0000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+    "crestHalo": "light"
   },
   {
     "id": "256",
@@ -411,7 +501,9 @@
     "shortName": "James Madison",
     "abbreviation": "JMU",
     "color": "#450084",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2305",
@@ -420,7 +512,9 @@
     "shortName": "Kansas",
     "abbreviation": "KU",
     "color": "#0051ba",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2305.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2306",
@@ -429,7 +523,9 @@
     "shortName": "Kansas St",
     "abbreviation": "KSU",
     "color": "#330a57",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2306.png",
+    "crestHalo": "light"
   },
   {
     "id": "338",
@@ -438,7 +534,9 @@
     "shortName": "Kennesaw St",
     "abbreviation": "KENN",
     "color": "#fdbb30",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2309",
@@ -447,7 +545,9 @@
     "shortName": "Kent State",
     "abbreviation": "KENT",
     "color": "#002664",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2309.png",
+    "crestHalo": "dark"
   },
   {
     "id": "96",
@@ -456,7 +556,9 @@
     "shortName": "Kentucky",
     "abbreviation": "UK",
     "color": "#0033a0",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/96.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2335",
@@ -465,7 +567,9 @@
     "shortName": "Liberty",
     "abbreviation": "LIB",
     "color": "#0a254e",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2335.png",
+    "crestHalo": "dark"
   },
   {
     "id": "309",
@@ -474,7 +578,9 @@
     "shortName": "Louisiana",
     "abbreviation": "UL",
     "color": "#ce181e",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2348",
@@ -483,7 +589,9 @@
     "shortName": "Louisiana Tech",
     "abbreviation": "LT",
     "color": "#003087",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2348.png",
+    "crestHalo": "dark"
   },
   {
     "id": "97",
@@ -492,7 +600,9 @@
     "shortName": "Louisville",
     "abbreviation": "LOU",
     "color": "#c9001f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+    "crestHalo": "dark"
   },
   {
     "id": "99",
@@ -501,7 +611,9 @@
     "shortName": "LSU",
     "abbreviation": "LSU",
     "color": "#461d76",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/99.png",
+    "crestHalo": "dark"
   },
   {
     "id": "276",
@@ -510,7 +622,9 @@
     "shortName": "Marshall",
     "abbreviation": "MRSH",
     "color": "#00b140",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/276.png",
+    "crestHalo": "dark"
   },
   {
     "id": "120",
@@ -519,7 +633,9 @@
     "shortName": "Maryland",
     "abbreviation": "MD",
     "color": "#ce1126",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/120.png",
+    "crestHalo": "dark"
   },
   {
     "id": "113",
@@ -528,7 +644,9 @@
     "shortName": "UMass",
     "abbreviation": "MASS",
     "color": "#881c1c",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/113.png",
+    "crestHalo": "dark"
   },
   {
     "id": "235",
@@ -537,7 +655,9 @@
     "shortName": "Memphis",
     "abbreviation": "MEM",
     "color": "#004991",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+    "crestHalo": "dark"
   },
   {
     "id": "193",
@@ -546,7 +666,9 @@
     "shortName": "Miami OH",
     "abbreviation": "M-OH",
     "color": "#c41230",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/193.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2390",
@@ -555,7 +677,9 @@
     "shortName": "Miami",
     "abbreviation": "MIA",
     "color": "#f47423",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+    "crestHalo": "dark"
   },
   {
     "id": "127",
@@ -564,7 +688,9 @@
     "shortName": "Michigan St",
     "abbreviation": "MSU",
     "color": "#173f35",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/127.png",
+    "crestHalo": "dark"
   },
   {
     "id": "130",
@@ -573,7 +699,9 @@
     "shortName": "Michigan",
     "abbreviation": "MICH",
     "color": "#00274c",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/130.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2393",
@@ -582,7 +710,9 @@
     "shortName": "MTSU",
     "abbreviation": "MTSU",
     "color": "#036eb7",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2393.png",
+    "crestHalo": "dark"
   },
   {
     "id": "135",
@@ -591,7 +721,9 @@
     "shortName": "Minnesota",
     "abbreviation": "MINN",
     "color": "#5e0a2f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+    "crestHalo": "light"
   },
   {
     "id": "344",
@@ -600,7 +732,9 @@
     "shortName": "Mississippi St",
     "abbreviation": "MSST",
     "color": "#5d1725",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/344.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2623",
@@ -609,7 +743,9 @@
     "shortName": "Missouri St",
     "abbreviation": "MOST",
     "color": "#5e0009",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2623.png",
+    "crestHalo": "dark"
   },
   {
     "id": "142",
@@ -618,7 +754,9 @@
     "shortName": "Missouri",
     "abbreviation": "MIZ",
     "color": "#f1b82d",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2426",
@@ -627,7 +765,9 @@
     "shortName": "Navy",
     "abbreviation": "NAVY",
     "color": "#00225b",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2426.png",
+    "crestHalo": "dark"
   },
   {
     "id": "152",
@@ -636,7 +776,9 @@
     "shortName": "NC State",
     "abbreviation": "NCSU",
     "color": "#cc0000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+    "crestHalo": "dark"
   },
   {
     "id": "158",
@@ -645,7 +787,9 @@
     "shortName": "Nebraska",
     "abbreviation": "NEB",
     "color": "#e31937",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2440",
@@ -654,7 +798,9 @@
     "shortName": "Nevada",
     "abbreviation": "NEV",
     "color": "#041e42",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2440.png",
+    "crestHalo": "dark"
   },
   {
     "id": "167",
@@ -663,7 +809,9 @@
     "shortName": "New Mexico",
     "abbreviation": "UNM",
     "color": "#ba0c2f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+    "crestHalo": "dark"
   },
   {
     "id": "166",
@@ -672,7 +820,9 @@
     "shortName": "New Mexico St",
     "abbreviation": "NMSU",
     "color": "#7e141b",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/166.png",
+    "crestHalo": "dark"
   },
   {
     "id": "153",
@@ -681,7 +831,9 @@
     "shortName": "North Carolina",
     "abbreviation": "UNC",
     "color": "#7bafd4",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/153.png",
+    "crestHalo": "dark"
   },
   {
     "id": "249",
@@ -690,7 +842,9 @@
     "shortName": "North Texas",
     "abbreviation": "UNT",
     "color": "#068f33",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/249.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2459",
@@ -699,7 +853,9 @@
     "shortName": "N Illinois",
     "abbreviation": "NIU",
     "color": "#c8102e",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png",
+    "crestHalo": "dark"
   },
   {
     "id": "77",
@@ -708,7 +864,9 @@
     "shortName": "Northwestern",
     "abbreviation": "NU",
     "color": "#492f92",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+    "crestHalo": "dark"
   },
   {
     "id": "87",
@@ -717,7 +875,9 @@
     "shortName": "Notre Dame",
     "abbreviation": "ND",
     "color": "#062340",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/87.png",
+    "crestHalo": "dark"
   },
   {
     "id": "195",
@@ -726,7 +886,9 @@
     "shortName": "Ohio",
     "abbreviation": "OHIO",
     "color": "#154734",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+    "crestHalo": "dark"
   },
   {
     "id": "194",
@@ -735,7 +897,9 @@
     "shortName": "Ohio State",
     "abbreviation": "OSU",
     "color": "#ba0c2f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/194.png",
+    "crestHalo": "dark"
   },
   {
     "id": "201",
@@ -744,7 +908,9 @@
     "shortName": "Oklahoma",
     "abbreviation": "OU",
     "color": "#990000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/201.png",
+    "crestHalo": "dark"
   },
   {
     "id": "197",
@@ -753,7 +919,9 @@
     "shortName": "Oklahoma St",
     "abbreviation": "OKST",
     "color": "#fe5c00",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/197.png",
+    "crestHalo": "dark"
   },
   {
     "id": "295",
@@ -762,7 +930,9 @@
     "shortName": "Old Dominion",
     "abbreviation": "ODU",
     "color": "#003768",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/295.png",
+    "crestHalo": "dark"
   },
   {
     "id": "145",
@@ -771,7 +941,9 @@
     "shortName": "Ole Miss",
     "abbreviation": "MISS",
     "color": "#13294b",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/145.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2483",
@@ -780,7 +952,9 @@
     "shortName": "Oregon",
     "abbreviation": "ORE",
     "color": "#00934b",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2483.png",
+    "crestHalo": "dark"
   },
   {
     "id": "204",
@@ -789,7 +963,9 @@
     "shortName": "Oregon St",
     "abbreviation": "ORST",
     "color": "#dc4405",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+    "crestHalo": "light"
   },
   {
     "id": "213",
@@ -798,7 +974,9 @@
     "shortName": "Penn State",
     "abbreviation": "PSU",
     "color": "#061440",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/213.png",
+    "crestHalo": "dark"
   },
   {
     "id": "221",
@@ -807,7 +985,9 @@
     "shortName": "Pitt",
     "abbreviation": "PITT",
     "color": "#003594",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/221.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2509",
@@ -816,7 +996,9 @@
     "shortName": "Purdue",
     "abbreviation": "PUR",
     "color": "#ceb888",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+    "crestHalo": "dark"
   },
   {
     "id": "242",
@@ -825,7 +1007,9 @@
     "shortName": "Rice",
     "abbreviation": "RICE",
     "color": "#00205b",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/242.png",
+    "crestHalo": "dark"
   },
   {
     "id": "164",
@@ -834,7 +1018,9 @@
     "shortName": "Rutgers",
     "abbreviation": "RUTG",
     "color": "#ce0e2d",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/164.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2534",
@@ -843,7 +1029,9 @@
     "shortName": "Sam Houston",
     "abbreviation": "SHSU",
     "color": "#f56423",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2534.png",
+    "crestHalo": "dark"
   },
   {
     "id": "21",
@@ -852,16 +1040,20 @@
     "shortName": "San Diego St",
     "abbreviation": "SDSU",
     "color": "#a6192e",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/21.png",
+    "crestHalo": "dark"
   },
   {
     "id": "23",
     "slug": "san-jose-state-spartans",
-    "name": "San José State Spartans",
-    "shortName": "San José St",
+    "name": "San Jos\u00e9 State Spartans",
+    "shortName": "San Jos\u00e9 St",
     "abbreviation": "SJSU",
     "color": "#0038a8",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/23.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2567",
@@ -870,7 +1062,9 @@
     "shortName": "SMU",
     "abbreviation": "SMU",
     "color": "#a80000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2567.png",
+    "crestHalo": "dark"
   },
   {
     "id": "6",
@@ -879,7 +1073,9 @@
     "shortName": "South Alabama",
     "abbreviation": "USA",
     "color": "#00205b",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2579",
@@ -888,7 +1084,9 @@
     "shortName": "South Carolina",
     "abbreviation": "SC",
     "color": "#73000a",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2579.png",
+    "crestHalo": "dark"
   },
   {
     "id": "58",
@@ -897,7 +1095,9 @@
     "shortName": "South Florida",
     "abbreviation": "USF",
     "color": "#006747",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2572",
@@ -906,7 +1106,9 @@
     "shortName": "Southern Miss",
     "abbreviation": "USM",
     "color": "#ffc72c",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+    "crestHalo": "light"
   },
   {
     "id": "24",
@@ -915,7 +1117,9 @@
     "shortName": "Stanford",
     "abbreviation": "STAN",
     "color": "#8c1515",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/24.png",
+    "crestHalo": "dark"
   },
   {
     "id": "183",
@@ -924,7 +1128,9 @@
     "shortName": "Syracuse",
     "abbreviation": "SYR",
     "color": "#000e54",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/183.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2628",
@@ -933,7 +1139,9 @@
     "shortName": "TCU",
     "abbreviation": "TCU",
     "color": "#4d1979",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2628.png",
+    "crestHalo": "dark"
   },
   {
     "id": "218",
@@ -942,7 +1150,9 @@
     "shortName": "Temple",
     "abbreviation": "TEM",
     "color": "#a41e35",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/218.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2633",
@@ -951,7 +1161,9 @@
     "shortName": "Tennessee",
     "abbreviation": "TENN",
     "color": "#ff8200",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2633.png",
+    "crestHalo": "dark"
   },
   {
     "id": "245",
@@ -960,7 +1172,9 @@
     "shortName": "Texas A&M",
     "abbreviation": "TA&M",
     "color": "#500000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/245.png",
+    "crestHalo": "dark"
   },
   {
     "id": "251",
@@ -969,7 +1183,9 @@
     "shortName": "Texas",
     "abbreviation": "TEX",
     "color": "#af5c37",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/251.png",
+    "crestHalo": "dark"
   },
   {
     "id": "326",
@@ -978,7 +1194,9 @@
     "shortName": "Texas St",
     "abbreviation": "TXST",
     "color": "#501214",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
+    "crestHalo": "light"
   },
   {
     "id": "2641",
@@ -987,7 +1205,9 @@
     "shortName": "Texas Tech",
     "abbreviation": "TTU",
     "color": "#da291c",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2641.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2649",
@@ -996,7 +1216,9 @@
     "shortName": "Toledo",
     "abbreviation": "TOL",
     "color": "#0b2240",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2649.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2653",
@@ -1005,7 +1227,9 @@
     "shortName": "Troy",
     "abbreviation": "TROY",
     "color": "#862633",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2653.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2655",
@@ -1014,7 +1238,9 @@
     "shortName": "Tulane",
     "abbreviation": "TULN",
     "color": "#006747",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+    "crestHalo": "dark"
   },
   {
     "id": "202",
@@ -1023,7 +1249,9 @@
     "shortName": "Tulsa",
     "abbreviation": "TLSA",
     "color": "#003595",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/202.png",
+    "crestHalo": "dark"
   },
   {
     "id": "5",
@@ -1032,7 +1260,9 @@
     "shortName": "UAB",
     "abbreviation": "UAB",
     "color": "#1a5632",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/5.png",
+    "crestHalo": "light"
   },
   {
     "id": "2116",
@@ -1041,7 +1271,9 @@
     "shortName": "UCF",
     "abbreviation": "UCF",
     "color": "#000000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+    "crestHalo": "dark"
   },
   {
     "id": "26",
@@ -1050,7 +1282,9 @@
     "shortName": "UCLA",
     "abbreviation": "UCLA",
     "color": "#2774ae",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/26.png",
+    "crestHalo": "dark"
   },
   {
     "id": "41",
@@ -1059,7 +1293,9 @@
     "shortName": "UConn",
     "abbreviation": "CONN",
     "color": "#0c2340",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2433",
@@ -1068,7 +1304,9 @@
     "shortName": "UL Monroe",
     "abbreviation": "ULM",
     "color": "#840029",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2433.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2439",
@@ -1077,7 +1315,9 @@
     "shortName": "UNLV",
     "abbreviation": "UNLV",
     "color": "#cf0a2c",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2439.png",
+    "crestHalo": "dark"
   },
   {
     "id": "30",
@@ -1086,7 +1326,9 @@
     "shortName": "USC",
     "abbreviation": "USC",
     "color": "#9d2235",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+    "crestHalo": "dark"
   },
   {
     "id": "328",
@@ -1095,7 +1337,9 @@
     "shortName": "Utah State",
     "abbreviation": "USU",
     "color": "#0f2439",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/328.png",
+    "crestHalo": "dark"
   },
   {
     "id": "254",
@@ -1104,7 +1348,9 @@
     "shortName": "Utah",
     "abbreviation": "UTAH",
     "color": "#be0000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/254.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2638",
@@ -1113,7 +1359,9 @@
     "shortName": "UTEP",
     "abbreviation": "UTEP",
     "color": "#ff8200",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+    "crestHalo": "light"
   },
   {
     "id": "2636",
@@ -1122,7 +1370,9 @@
     "shortName": "UTSA",
     "abbreviation": "UTSA",
     "color": "#0c2340",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2636.png",
+    "crestHalo": "dark"
   },
   {
     "id": "238",
@@ -1131,7 +1381,9 @@
     "shortName": "Vanderbilt",
     "abbreviation": "VAN",
     "color": "#000000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/238.png",
+    "crestHalo": "dark"
   },
   {
     "id": "258",
@@ -1140,7 +1392,9 @@
     "shortName": "Virginia",
     "abbreviation": "UVA",
     "color": "#f84c1e",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+    "crestHalo": "light"
   },
   {
     "id": "259",
@@ -1149,7 +1403,9 @@
     "shortName": "Virginia Tech",
     "abbreviation": "VT",
     "color": "#6a2c3e",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/259.png",
+    "crestHalo": "dark"
   },
   {
     "id": "154",
@@ -1158,7 +1414,9 @@
     "shortName": "Wake Forest",
     "abbreviation": "WAKE",
     "color": "#ceb888",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+    "crestHalo": "light"
   },
   {
     "id": "264",
@@ -1167,7 +1425,9 @@
     "shortName": "Washington",
     "abbreviation": "WASH",
     "color": "#33006f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/264.png",
+    "crestHalo": "light"
   },
   {
     "id": "265",
@@ -1176,7 +1436,9 @@
     "shortName": "Washington St",
     "abbreviation": "WSU",
     "color": "#a60f2d",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/265.png",
+    "crestHalo": "dark"
   },
   {
     "id": "277",
@@ -1185,7 +1447,9 @@
     "shortName": "West Virginia",
     "abbreviation": "WVU",
     "color": "#eaaa00",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+    "crestHalo": "light"
   },
   {
     "id": "98",
@@ -1194,7 +1458,9 @@
     "shortName": "Western KY",
     "abbreviation": "WKU",
     "color": "#e13a3e",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/98.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2711",
@@ -1203,7 +1469,9 @@
     "shortName": "W Michigan",
     "abbreviation": "WMU",
     "color": "#532e1f",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
+    "crestHalo": "dark"
   },
   {
     "id": "275",
@@ -1212,7 +1480,9 @@
     "shortName": "Wisconsin",
     "abbreviation": "WIS",
     "color": "#a00000",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+    "crestHalo": "dark"
   },
   {
     "id": "2751",
@@ -1221,6 +1491,8 @@
     "shortName": "Wyoming",
     "abbreviation": "WYO",
     "color": "#492f24",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png"
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+    "wedgeLogo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+    "crestHalo": "light"
   }
 ]

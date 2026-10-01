@@ -50,7 +50,9 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
       '--fav-team': color,
       // The crest rides along as a custom property so the wedge is drawn
       // entirely in CSS — see the note below.
-      '--fav-crest': team && team.logo ? 'url("' + team.logo + '")' : 'none',
+      '--fav-crest': team && (team.wedgeLogo || team.logo) ? 'url("' + (team.wedgeLogo || team.logo) + '")' : 'none',
+      // The outline colour that makes this crest read on this club's colour.
+      '--fav-halo': team && team.crestHalo === 'light' ? 'rgba(255, 255, 255, 0.92)' : 'rgba(10, 12, 16, 0.85)',
     });
   });
 

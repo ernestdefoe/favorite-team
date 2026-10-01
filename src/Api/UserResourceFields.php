@@ -61,6 +61,16 @@ class UserResourceFields
                         'abbreviation' => $team['abbreviation'],
                         'color'        => $team['color'] ?? null,
                         'logo'         => $team['logo'],
+                        // 🚨 The crest the WEDGE uses, which is not always the
+                        // crest shown elsewhere. Measured per team against that
+                        // team's own colour: 88 of 136 read better as ESPN's
+                        // 500-dark variant, and Alabama's is the white script A.
+                        'wedgeLogo'    => $team['wedgeLogo'] ?? $team['logo'],
+                        // 'light' or 'dark' — the outline that separates this
+                        // crest from its own club colour. 30 teams have no
+                        // variant that contrasts with their wedge at all, so
+                        // the outline is what rescues them.
+                        'crestHalo'    => $team['crestHalo'] ?? 'dark',
                     ];
                 }),
         ];

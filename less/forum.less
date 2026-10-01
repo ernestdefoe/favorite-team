@@ -83,7 +83,21 @@
     // 🚨 `contain`, not a fixed size. ESPN crests are not all square, and a
     // fixed 42x42 squashes the wide ones.
     background-size: contain;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.55));
+    /*
+     * 🚨 Two tight shadows in the halo colour draw an OUTLINE; the third is
+     * the depth shadow the XenForo build uses.
+     *
+     * An outline is what makes this work for all 136 clubs rather than most of
+     * them. Measured: 88 crests read better as ESPN's 500-dark variant, but 30
+     * clubs have NO variant that contrasts with their own colour — the crest is
+     * the club colour, because of course it is. The outline contrasts with the
+     * crest, and where crest and wedge are nearly the same colour it therefore
+     * contrasts with the wedge too, so one rule covers both cases.
+     */
+    filter:
+      drop-shadow(0 0 1px var(--fav-halo, rgba(10, 12, 16, 0.85)))
+      drop-shadow(0 0 1px var(--fav-halo, rgba(10, 12, 16, 0.85)))
+      drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
   }
 }
 
