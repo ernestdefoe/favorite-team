@@ -19,3 +19,4 @@ ernestdefoe-favorite-team:
     settings_title: Favorite Team
     require_at_registration_label: Require members to pick a team
     require_at_registration_help: Until they pick a favorite team, members are prompted on load and can't start discussions or post replies (enforced server-side). Reading stays open.
+    skip_requirement_permission: Post without choosing a favorite team

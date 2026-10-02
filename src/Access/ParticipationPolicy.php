@@ -20,6 +20,8 @@ use Flarum\User\User;
  */
 class ParticipationPolicy extends AbstractPolicy
 {
+    public const SKIP_PERMISSION = 'ernestdefoe-favorite-team.skipRequirement';
+
     public function __construct(
         protected SettingsRepositoryInterface $settings
     ) {
@@ -41,6 +43,13 @@ class ParticipationPolicy extends AbstractPolicy
             return false;
         }
         if (! (bool) $this->settings->get('ernestdefoe-favorite-team.require_at_registration')) {
+            return false;
+        }
+
+        // Accounts allowed to skip it: a forum's AI assistant or game-thread
+        // bot has no team and should not have one — and without this, every
+        // reply it posts through the API is refused.
+        if ($actor->hasPermission(self::SKIP_PERMISSION)) {
             return false;
         }
         return ! $actor->getPreference(UserResourceFields::PREF_KEY);
