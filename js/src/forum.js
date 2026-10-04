@@ -4,6 +4,7 @@ import TeamPickerModal from './forum/components/TeamPickerModal';
 import FavoriteTeamSettings from './forum/components/FavoriteTeamSettings';
 import teamBadge from './forum/helpers/teamBadge';
 import { teamColor } from './forum/helpers/teamColor';
+import { watch, unwatch, removeFloats } from './forum/helpers/wedgeReserve';
 
 app.initializers.add('ernestdefoe-favorite-team', () => {
   // The favorite-team fields are read via user.attribute(...) directly — no
@@ -56,6 +57,46 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
     });
   });
 
+
+  // ── Keep the text out from under the wedge ───────────────────────────────
+  //
+  // The wedge reserves its own corner of the content with two floats — see
+  // helpers/wedgeReserve.js for why floats and not padding. While the post is
+  // being edited the body holds the composer preview instead, and the reserve
+  // comes out.
+  function syncReserve(component) {
+    try {
+      const el = component.element;
+      const body = el && el.querySelector('.Post-body');
+      if (!body) return;
+
+      if (el.classList.contains('FavTeam-post') && !component.isEditing()) {
+        // Keyed on the content: onupdate runs on every redraw of the stream,
+        // and only new content (or a new body) needs a fresh fit — the
+        // observer covers every change of size.
+        watch(body, component.attrs.post.contentHtml());
+      } else {
+        unwatch(body);
+        removeFloats(body);
+      }
+    } catch (e) {
+      // A layout nicety must never take the post stream down with it.
+    }
+  }
+
+  extend('flarum/forum/components/CommentPost', 'oncreate', function () {
+    syncReserve(this);
+  });
+
+  extend('flarum/forum/components/CommentPost', 'onupdate', function () {
+    syncReserve(this);
+  });
+
+  extend('flarum/forum/components/CommentPost', 'onremove', function () {
+    try {
+      unwatch(this.element && this.element.querySelector('.Post-body'));
+    } catch (e) {}
+  });
 
   // Profile/user card: add the badge to .UserCard-profile's ItemList (where the
   // avatar lives) so CSS can overlay it on the avatar corner. Using the

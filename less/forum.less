@@ -112,6 +112,35 @@
   z-index: 1;
 }
 
+// 🚨 The text WRAPS around the wedge instead of running under it.
+//
+// Two floats the forum JS puts at the start of the body reserve the wedge's
+// corner of the content (helpers/wedgeReserve.js has the whole story). The
+// body becomes a flow root so they count towards its height — without that a
+// float could hang out of the card and push the Reply / Like row about.
+.FavTeam-post .Post-body {
+  display: flow-root;
+}
+
+.FavTeam-reserveGap,
+.FavTeam-reserveCurve {
+  float: right;
+  clear: right;
+  display: block;
+  pointer-events: none;
+}
+
+.FavTeam-reserveGap {
+  width: 0;
+}
+
+.FavTeam-reserveCurve {
+  // Breathing room between the last words and the wedge's edge. A float's
+  // shape is clipped to its margin box, so the polygon the JS draws needs this
+  // margin to have anywhere to put it.
+  margin-left: 8px;
+}
+
 // 🚨 Specific enough to actually win. A plain `.FavTeam-post .Post-body` rule
 // lost to the theme's own padding and computed back as 14px, so the wedge had
 // nothing to clear and a short post's last line sat across the crest.
