@@ -2,6 +2,7 @@ import app from 'flarum/forum/app';
 import Component from 'flarum/common/Component';
 import Button from 'flarum/common/components/Button';
 import TeamPickerModal from './TeamPickerModal';
+import crestUrl from '../helpers/crest';
 
 /**
  * Account-settings control: shows the current favorite team (logo + name) and
@@ -19,7 +20,7 @@ export default class FavoriteTeamSettings extends Component {
       m('.FavoriteTeamSettings-current', [
         team
           ? [
-              m('img.FavoriteTeamSettings-logo', { src: team.logo, alt: '' }),
+              m('img.FavoriteTeamSettings-logo', { src: crestUrl(team.logo, 40), alt: '', decoding: 'async' }),
               m('span.FavoriteTeamSettings-name', team.name),
             ]
           : m('span.FavoriteTeamSettings-none', t('none')),

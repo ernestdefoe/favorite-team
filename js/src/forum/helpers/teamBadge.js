@@ -1,4 +1,5 @@
 import Tooltip from 'flarum/common/components/Tooltip';
+import crestUrl from './crest';
 
 /**
  * Small team-logo badge shown on a user's avatar. Returns null when the user
@@ -14,6 +15,6 @@ export default function teamBadge(user) {
   return m(
     Tooltip,
     { text: team.name },
-    m('span.FavTeamBadge', [m('img.FavTeamBadge-logo', { src: team.logo, alt: team.name, loading: 'lazy' })])
+    m('span.FavTeamBadge', [m('img.FavTeamBadge-logo', { src: crestUrl(team.logo, 22), alt: team.name, loading: 'lazy', decoding: 'async' })])
   );
 }

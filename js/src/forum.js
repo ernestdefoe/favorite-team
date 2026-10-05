@@ -5,6 +5,7 @@ import FavoriteTeamSettings from './forum/components/FavoriteTeamSettings';
 import teamBadge from './forum/helpers/teamBadge';
 import { teamColor } from './forum/helpers/teamColor';
 import { watch, unwatch, removeFloats } from './forum/helpers/wedgeReserve';
+import crestUrl from './forum/helpers/crest';
 
 app.initializers.add('ernestdefoe-favorite-team', () => {
   // The favorite-team fields are read via user.attribute(...) directly — no
@@ -51,7 +52,7 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
       '--fav-team': color,
       // The crest rides along as a custom property so the wedge is drawn
       // entirely in CSS — see the note below.
-      '--fav-crest': team && (team.wedgeLogo || team.logo) ? 'url("' + (team.wedgeLogo || team.logo) + '")' : 'none',
+      '--fav-crest': team && (team.wedgeLogo || team.logo) ? 'url("' + crestUrl(team.wedgeLogo || team.logo, 42) + '")' : 'none',
       // The outline colour that makes this crest read on this club's colour.
       '--fav-halo': team && team.crestHalo === 'light' ? 'rgba(255, 255, 255, 0.92)' : 'rgba(10, 12, 16, 0.85)',
     });

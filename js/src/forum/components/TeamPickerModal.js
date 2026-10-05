@@ -3,6 +3,7 @@ import Modal from 'flarum/common/components/Modal';
 import Button from 'flarum/common/components/Button';
 import LoadingIndicator from 'flarum/common/components/LoadingIndicator';
 import { loadTeams } from '../utils/teams';
+import crestUrl from '../helpers/crest';
 
 /**
  * Grid picker of all FBS teams (logo + name). Used by the account-settings
@@ -88,7 +89,7 @@ export default class TeamPickerModal extends Modal {
             className: String(this.selected) === String(team.id) ? 'is-selected' : '',
             onclick: () => { this.selected = team.id; m.redraw(); },
           }, [
-            m('img.FavTeamPicker-tileLogo', { src: team.logo, alt: '', loading: 'lazy' }),
+            m('img.FavTeamPicker-tileLogo', { src: crestUrl(team.logo, 52), alt: '', loading: 'lazy', decoding: 'async' }),
             m('span.FavTeamPicker-tileName', team.name),
           ])
         )
