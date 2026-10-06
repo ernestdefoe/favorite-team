@@ -83,10 +83,8 @@ affiliated with or endorsed by the NCAA, ESPN, or any team.
 
 ## Support
 
-Questions, bug reports, and feature requests:
-
-- **Support forum:** https://ernestdefoe.online
-- **Issues:** https://github.com/ernestdefoe/favorite-team/issues
+- **Support forum:** [Favorite Team on ernestdefoe.online](https://ernestdefoe.online/d/16)
+- **Bug reports:** [GitHub issues](https://github.com/ernestdefoe/favorite-team/issues)
 
 ## License
 
