@@ -31,7 +31,7 @@ return [
 
     // Exposed to the forum so the registration gate knows whether to block.
     (new Extend\Settings())
-        ->serializeToForum('ernestdefoe-favorite-team.requireAtRegistration', 'ernestdefoe-favorite-team.require_at_registration', 'boolval', false),
+        ->serializeToForum('ernestdefoe-favorite-team.requireAtRegistration', 'ernestdefoe-favorite-team.require_at_registration', 'boolval'),
 
     // Share one TeamRepository (and its memoized teams.json) per request.
     (new Extend\ServiceProvider())

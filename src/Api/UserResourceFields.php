@@ -6,6 +6,7 @@ use Ernestdefoe\FavoriteTeam\TeamRepository;
 use Flarum\Api\Context;
 use Flarum\Api\Schema;
 use Flarum\Foundation\ValidationException;
+use Flarum\User\User;
 
 /**
  * Adds the user's favorite FBS team to the core UserResource.
@@ -76,7 +77,7 @@ class UserResourceFields
         ];
     }
 
-    protected function isSelfOrAdmin($user, Context $c): bool
+    protected function isSelfOrAdmin(User $user, Context $c): bool
     {
         $actor = $c->getActor();
 
