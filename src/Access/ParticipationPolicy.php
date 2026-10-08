@@ -3,6 +3,7 @@
 namespace Ernestdefoe\FavoriteTeam\Access;
 
 use Ernestdefoe\FavoriteTeam\Api\UserResourceFields;
+use Ernestdefoe\FavoriteTeam\TeamRepository;
 use Flarum\Discussion\Discussion;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\Access\AbstractPolicy;
@@ -23,7 +24,8 @@ class ParticipationPolicy extends AbstractPolicy
     public const SKIP_PERMISSION = 'ernestdefoe-favorite-team.skipRequirement';
 
     public function __construct(
-        protected SettingsRepositoryInterface $settings
+        protected SettingsRepositoryInterface $settings,
+        protected TeamRepository $teams
     ) {
     }
 
@@ -52,6 +54,9 @@ class ParticipationPolicy extends AbstractPolicy
         if ($actor->hasPermission(self::SKIP_PERMISSION)) {
             return false;
         }
-        return ! $actor->getPreference(UserResourceFields::PREF_KEY);
+
+        // A team on the list, not just any value: core lets a member write
+        // their own preferences directly, past favoriteTeamId's validation.
+        return ! $this->teams->exists($actor->getPreference(UserResourceFields::PREF_KEY));
     }
 }
