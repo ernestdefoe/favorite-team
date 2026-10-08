@@ -24,7 +24,7 @@ class TeamRepository
             // has not been set" when hit during request boot (this runs while the
             // user API document is built). The existence guard degrades a missing
             // file to an empty list rather than throwing.
-            $path = __DIR__ . '/../resources/teams.json';
+            $path = __DIR__.'/../resources/teams.json';
             $json = file_exists($path) ? file_get_contents($path) : false;
             $data = $json !== false ? json_decode($json, true) : null;
             $this->teams = is_array($data) ? $data : [];
