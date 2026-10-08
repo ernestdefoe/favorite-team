@@ -13,12 +13,12 @@ import crestUrl from '../helpers/crest';
 export default class TeamPickerModal extends Modal {
   oninit(vnode) {
     super.oninit(vnode);
-    this.teams     = null;
-    this.loading   = true;
-    this.error     = false;
-    this.saving    = false;
+    this.teams = null;
+    this.loading = true;
+    this.error = false;
+    this.saving = false;
     this.saveError = false;
-    this.filter    = '';
+    this.filter = '';
     this.selected = app.session.user ? app.session.user.attribute('favoriteTeamId') || null : null;
   }
 
@@ -26,12 +26,12 @@ export default class TeamPickerModal extends Modal {
     super.oncreate(vnode);
     loadTeams()
       .then((teams) => {
-        this.teams   = teams;
+        this.teams = teams;
         this.loading = false;
         m.redraw();
       })
       .catch(() => {
-        this.error   = true;
+        this.error = true;
         this.loading = false;
         m.redraw();
       });
@@ -64,55 +64,67 @@ export default class TeamPickerModal extends Modal {
     }
 
     const needle = this.filter.trim().toLowerCase();
-    const shown = needle
-      ? this.teams.filter((team) => team.name.toLowerCase().includes(needle))
-      : this.teams;
+    const shown = needle ? this.teams.filter((team) => team.name.toLowerCase().includes(needle)) : this.teams;
 
     return m('.Modal-body', [
-      this.attrs.required
-        ? m('p.FavTeamPicker-help', t('gate_help'))
-        : null,
+      this.attrs.required ? m('p.FavTeamPicker-help', t('gate_help')) : null,
 
       m('input.FormControl.FavTeamPicker-search', {
         type: 'search',
         placeholder: t('search_placeholder'),
         value: this.filter,
-        oninput: (e) => { this.filter = e.target.value; },
+        oninput: (e) => {
+          this.filter = e.target.value;
+        },
         autofocus: true,
       }),
 
-      m('.FavTeamPicker-grid',
+      m(
+        '.FavTeamPicker-grid',
         shown.map((team) =>
-          m('button.FavTeamPicker-tile', {
-            type: 'button',
-            key: team.id,
-            className: String(this.selected) === String(team.id) ? 'is-selected' : '',
-            onclick: () => { this.selected = team.id; m.redraw(); },
-          }, [
-            m('img.FavTeamPicker-tileLogo', { src: crestUrl(team.logo, 52), alt: '', loading: 'lazy', decoding: 'async' }),
-            m('span.FavTeamPicker-tileName', team.name),
-          ])
+          m(
+            'button.FavTeamPicker-tile',
+            {
+              type: 'button',
+              key: team.id,
+              className: String(this.selected) === String(team.id) ? 'is-selected' : '',
+              onclick: () => {
+                this.selected = team.id;
+                m.redraw();
+              },
+            },
+            [
+              m('img.FavTeamPicker-tileLogo', { src: crestUrl(team.logo, 52), alt: '', loading: 'lazy', decoding: 'async' }),
+              m('span.FavTeamPicker-tileName', team.name),
+            ]
+          )
         )
       ),
 
-      this.saveError
-        ? m('.Alert.Alert--error.FavTeamPicker-saveError', t('save_error'))
-        : null,
+      this.saveError ? m('.Alert.Alert--error.FavTeamPicker-saveError', t('save_error')) : null,
 
       m('.FavTeamPicker-actions', [
-        m(Button, {
-          className: 'Button Button--primary',
-          loading: this.saving,
-          disabled: !this.selected || this.saving,
-          onclick: () => this.save(this.selected),
-        }, this.saving ? t('saving') : t('save')),
+        m(
+          Button,
+          {
+            className: 'Button Button--primary',
+            loading: this.saving,
+            disabled: !this.selected || this.saving,
+            onclick: () => this.save(this.selected),
+          },
+          this.saving ? t('saving') : t('save')
+        ),
 
         !this.attrs.required && app.session.user && app.session.user.attribute('favoriteTeamId')
-          ? m(Button, {
-              className: 'Button Button--link',
-              disabled: this.saving,
-              onclick: () => this.save(null),
-            }, t('clear'))
+          ? m(
+              Button,
+              {
+                className: 'Button Button--link',
+                disabled: this.saving,
+                onclick: () => this.save(null),
+              },
+              t('clear')
+            )
           : null,
       ]),
     ]);

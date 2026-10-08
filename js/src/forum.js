@@ -58,7 +58,6 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
     });
   });
 
-
   // ── Keep the text out from under the wedge ───────────────────────────────
   //
   // The wedge reserves its own corner of the content with two floats — see

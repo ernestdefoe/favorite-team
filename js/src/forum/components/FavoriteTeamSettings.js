@@ -25,10 +25,14 @@ export default class FavoriteTeamSettings extends Component {
             ]
           : m('span.FavoriteTeamSettings-none', t('none')),
 
-        m(Button, {
-          className: 'Button',
-          onclick: () => app.modal.show(TeamPickerModal, { onSaved: () => m.redraw() }),
-        }, team ? t('change') : t('choose')),
+        m(
+          Button,
+          {
+            className: 'Button',
+            onclick: () => app.modal.show(TeamPickerModal, { onSaved: () => m.redraw() }),
+          },
+          team ? t('change') : t('choose')
+        ),
       ]),
     ]);
   }
