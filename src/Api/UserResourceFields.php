@@ -6,6 +6,7 @@ use Ernestdefoe\FavoriteTeam\TeamRepository;
 use Flarum\Api\Context;
 use Flarum\Api\Schema;
 use Flarum\Foundation\ValidationException;
+use Flarum\Locale\TranslatorInterface;
 use Flarum\User\User;
 
 /**
@@ -21,8 +22,10 @@ class UserResourceFields
 {
     public const PREF_KEY = 'ernestdefoe-favorite-team.team';
 
-    public function __construct(protected TeamRepository $teams)
-    {
+    public function __construct(
+        protected TeamRepository $teams,
+        protected TranslatorInterface $translator,
+    ) {
     }
 
     public function __invoke(): array
@@ -42,7 +45,7 @@ class UserResourceFields
 
                     $id = (string) $value;
                     if (! $this->teams->exists($id)) {
-                        throw new ValidationException(['favoriteTeamId' => 'Unknown team.']);
+                        throw new ValidationException(['favoriteTeamId' => $this->translator->trans('ernestdefoe-favorite-team.api.unknown_team')]);
                     }
 
                     $user->setPreference(self::PREF_KEY, $id);
