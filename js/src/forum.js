@@ -98,14 +98,22 @@ app.initializers.add('ernestdefoe-favorite-team', () => {
     } catch (e) {}
   });
 
-  // Profile/user card: add the badge to .UserCard-profile's ItemList (where the
-  // avatar lives) so CSS can overlay it on the avatar corner. Using the
-  // profileItems seam keeps us out of mutating core's returned vnode tree.
-  extend('flarum/forum/components/UserCard', 'profileItems', function (items) {
+  // Profile/user card: the badge goes INSIDE the .UserCard-avatar box, so CSS
+  // anchors it to the avatar itself. 🚨 It used to be a sibling item in
+  // .UserCard-profile, placed at a fixed 70px offset — which only lines up with
+  // core's grid; a theme that lays the header out differently (Bespoke's flex
+  // row, any phone layout) left the crest floating beside the avatar.
+  extend('flarum/forum/components/UserCard', 'avatar', function (vnode) {
+    const box = vnode && vnode.children && vnode.children[0];
+    const badge = box && box.attrs && /\bUserCard-avatar\b/.test(box.attrs.className) && teamBadge(this.attrs.user);
+    if (badge) box.children.push(badge);
+  });
+
+  // Your own profile renders an AvatarEditor in that place instead of a link.
+  extend('flarum/forum/components/AvatarEditor', 'view', function (vdom) {
+    if (!/\bUserCard-avatar\b/.test(this.attrs.className || '')) return;
     const badge = teamBadge(this.attrs.user);
-    if (badge) {
-      items.add('ernestdefoe-favorite-team', badge, -10);
-    }
+    if (badge) vdom.children.push(badge);
   });
 
   // ── Block-until-chosen registration gate ─────────────────────────────────

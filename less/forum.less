@@ -185,14 +185,18 @@
 }
 
 // On the profile / user card, overlay the badge on the avatar's bottom-right
-// corner (the avatar sits in the first column of the .UserCard-profile grid).
-.UserCard-profile {
+// corner. The badge sits inside .UserCard-avatar, so that box is the anchor —
+// whatever layout the theme gives the header around it.
+.UserCard-avatar:has(> .FavTeamBadge) {
   position: relative;
+  // Core gives the box a fixed phone width; a theme with a bigger avatar
+  // overflows it, and the corner would then be the box's, not the avatar's.
+  min-width: max-content;
 
   > .FavTeamBadge {
     position: absolute;
-    top: 70px;
-    left: 70px;
+    right: 4px;
+    bottom: 4px;
     width: 30px;
     height: 30px;
     border: 2px solid var(--body-bg, #fff);
