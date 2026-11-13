@@ -122,6 +122,18 @@
   display: flow-root;
 }
 
+// 🚨 A quote's BOX has to step aside too, not just its words.
+//
+// The floats shorten line boxes, so a quote's text wraps short of the wedge —
+// but a block's own background and border are drawn full width straight
+// through any float beside it. A quote that ended a post sat its grey box on
+// top of the crest. A flow root is narrowed to clear the floats instead. Code
+// blocks (overflow: auto) and tables are flow roots already.
+.FavTeam-post .Post-body blockquote,
+.FavTeam-post .Post-body details {
+  display: flow-root;
+}
+
 .FavTeam-reserveGap,
 .FavTeam-reserveCurve {
   float: right;
