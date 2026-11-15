@@ -4,22 +4,18 @@ namespace Ernestdefoe\FavoriteTeam\Access;
 
 use Ernestdefoe\FavoriteTeam\Api\UserResourceFields;
 use Ernestdefoe\FavoriteTeam\TeamRepository;
-use Flarum\Discussion\Discussion;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Flarum\User\Access\AbstractPolicy;
 use Flarum\User\User;
 
 /**
- * Server-side enforcement of the "pick a team first" requirement. The JS modal
- * only nudges the user; this makes the requirement real — when the admin
- * setting is on, a registered user who hasn't chosen a favorite team is denied
- * `startDiscussion` and `reply`, so even a direct API write is rejected (and the
- * composer/reply controls hide, since the frontend reads the same abilities).
- *
- * Reading, logging in and setting the team are all unaffected, so a user is
- * never locked out of actually choosing their team.
+ * Server-side "pick a team first" check, shared by the two policies. The JS
+ * modal only nudges the user; this makes the requirement real: when the admin
+ * setting is on, a registered user without a favorite team is denied
+ * `startDiscussion` and `reply`, so even a direct API write is rejected (and
+ * the composer/reply controls hide, since the frontend reads the same
+ * abilities). Reading, logging in and setting the team are unaffected.
  */
-class ParticipationPolicy extends AbstractPolicy
+class TeamRequirement
 {
     public const SKIP_PERMISSION = 'ernestdefoe-favorite-team.skipRequirement';
 
@@ -29,17 +25,7 @@ class ParticipationPolicy extends AbstractPolicy
     ) {
     }
 
-    public function startDiscussion(User $actor): ?string
-    {
-        return $this->lacksRequiredTeam($actor) ? $this->deny() : null;
-    }
-
-    public function reply(User $actor, Discussion $discussion): ?string
-    {
-        return $this->lacksRequiredTeam($actor) ? $this->deny() : null;
-    }
-
-    protected function lacksRequiredTeam(User $actor): bool
+    public function blocks(User $actor): bool
     {
         if (! $actor->exists) {
             return false;
@@ -49,7 +35,7 @@ class ParticipationPolicy extends AbstractPolicy
         }
 
         // Accounts allowed to skip it: a forum's AI assistant or game-thread
-        // bot has no team and should not have one — and without this, every
+        // bot has no team and should not have one, and without this every
         // reply it posts through the API is refused.
         if ($actor->hasPermission(self::SKIP_PERMISSION)) {
             return false;

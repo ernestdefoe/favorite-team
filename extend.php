@@ -1,6 +1,7 @@
 <?php
 
-use Ernestdefoe\FavoriteTeam\Access\ParticipationPolicy;
+use Ernestdefoe\FavoriteTeam\Access\DiscussionPolicy;
+use Ernestdefoe\FavoriteTeam\Access\StartDiscussionPolicy;
 use Ernestdefoe\FavoriteTeam\Api\Controller\ListTeamsController;
 use Ernestdefoe\FavoriteTeam\Api\UserResourceFields;
 use Ernestdefoe\FavoriteTeam\FavoriteTeamServiceProvider;
@@ -41,6 +42,6 @@ return [
     // members without a team can't start discussions or reply (the JS modal is
     // only a prompt). Reading and choosing a team stay open.
     (new Extend\Policy())
-        ->globalPolicy(ParticipationPolicy::class)
-        ->modelPolicy(Discussion::class, ParticipationPolicy::class),
+        ->globalPolicy(StartDiscussionPolicy::class)
+        ->modelPolicy(Discussion::class, DiscussionPolicy::class),
 ];

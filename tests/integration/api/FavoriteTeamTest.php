@@ -181,6 +181,36 @@ class FavoriteTeamTest extends TestCase
     }
 
     #[Test]
+    public function the_requirement_shows_in_both_abilities_the_frontend_reads()
+    {
+        $this->setting('ernestdefoe-favorite-team.require_at_registration', '1');
+
+        // startDiscussion: the global policy, read from the forum resource.
+        [, $body] = $this->json('GET', '/api', 2);
+        $this->assertFalse($body['data']['attributes']['canStartDiscussion']);
+        [, $body] = $this->json('GET', '/api', 3);
+        $this->assertTrue($body['data']['attributes']['canStartDiscussion']);
+        [, $body] = $this->json('GET', '/api', 4);
+        $this->assertTrue($body['data']['attributes']['canStartDiscussion']);
+
+        // reply: the Discussion policy, read from the discussion resource.
+        [, $body] = $this->json('GET', '/api/discussions/1', 2);
+        $this->assertFalse($body['data']['attributes']['canReply']);
+        [, $body] = $this->json('GET', '/api/discussions/1', 3);
+        $this->assertTrue($body['data']['attributes']['canReply']);
+        [, $body] = $this->json('GET', '/api/discussions/1', 4);
+        $this->assertTrue($body['data']['attributes']['canReply']);
+    }
+
+    #[Test]
+    public function an_account_allowed_to_skip_the_requirement_may_also_start_discussions()
+    {
+        $this->setting('ernestdefoe-favorite-team.require_at_registration', '1');
+
+        $this->assertSame(201, $this->startDiscussion(4));
+    }
+
+    #[Test]
     public function the_requirement_is_not_met_by_writing_a_junk_preference_directly()
     {
         $this->setting('ernestdefoe-favorite-team.require_at_registration', '1');
@@ -194,6 +224,7 @@ class FavoriteTeamTest extends TestCase
         $this->assertSame('anything', $this->storedTeam(2));
 
         $this->assertSame(403, $this->reply(2));
+        $this->assertSame(403, $this->startDiscussion(2));
     }
 
     #[Test]
